@@ -1,0 +1,190 @@
+.home-page {
+  width: 100%;
+  min-height: 100vh;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.page-container {
+  padding: 20px 16px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  display: block !important;
+  visibility: visible !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main-card {
+  background: linear-gradient(135deg, #FF69B4, #FF1493) !important;
+  border-radius: 20px;
+  padding: 32px 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(255, 105, 180, 0.5);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out;
+  min-height: 200px;
+  z-index: 1;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  width: 100%;
+}
+
+.main-card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.main-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.main-card-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.main-card-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.main-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.main-card-subtitle {
+  font-size: 16px;
+  opacity: 1 !important;
+  margin-bottom: 24px;
+  color: white !important;
+  visibility: visible !important;
+}
+
+.main-card-button {
+  background: white;
+  color: var(--primary-pink);
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.main-card-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.stars-card {
+  background: rgba(42, 42, 42, 0.95) !important;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 1;
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.stars-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.stars-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stars-card-icon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.stars-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--tg-theme-text-color) !important;
+  margin-bottom: 4px;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.stars-card-subtitle {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color) !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+

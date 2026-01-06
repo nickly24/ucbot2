@@ -1,0 +1,158 @@
+.order-history-page {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding-bottom: 100px;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.help-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-pink);
+  background: transparent;
+  color: var(--primary-pink);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  margin-left: auto;
+}
+
+.help-button:active {
+  background: var(--primary-pink);
+  color: white;
+  transform: scale(0.9);
+}
+
+.help-popup {
+  background: var(--tg-theme-secondary-bg-color);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.help-popup h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--tg-theme-text-color);
+  margin-bottom: 12px;
+}
+
+.help-popup p {
+  font-size: 14px;
+  color: var(--tg-theme-text-color);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.help-popup p:last-child {
+  margin-bottom: 0;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-text {
+  font-size: 16px;
+  color: var(--tg-theme-hint-color);
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.order-card {
+  background: var(--tg-theme-secondary-bg-color);
+  border-radius: 16px;
+  padding: 16px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-date {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tg-theme-text-color);
+}
+
+.order-type {
+  font-size: 12px;
+  color: var(--tg-theme-hint-color);
+}
+
+.order-status {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.order-status.оплачено {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.order-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.order-amount {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tg-theme-text-color);
+}
+
+.order-codes,
+.order-player-id {
+  font-size: 14px;
+  color: var(--tg-theme-hint-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
